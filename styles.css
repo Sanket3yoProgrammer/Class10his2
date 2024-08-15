@@ -1,0 +1,104 @@
+ body {
+    font-family: 'Patrick Hand', cursive;
+    background-color: #cfffd0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1; /* Place the container above the line */
+}
+
+.note {
+    position: relative;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    background-color: white; /* Make sure the line is not visible through the note boxes */
+    border-radius: 12px;
+    border: 2px solid #4CAF50;
+}
+
+.year-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.year-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    top: -26px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px solid #4CAF50;
+    text-align: center;
+    font-weight: bold;
+    z-index: 2; /* Ensure the year box is above the line */
+    position: relative;
+}
+
+        
+.year-line::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    z-index: 3; /* Place the dot above the year box */
+}
+
+.text-box {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white; /* Ensure the line is not visible through the text box */
+    border: 2px solid white;
+    z-index: 2; /* Ensure the text box is above the line */
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: #f44336;
+    margin-left: 10px;
+}
+
+.meaning {
+    font-style: italic;
+    color: #757575;
+}
+
+a {
+    color: #1e88e5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+/* The continuous line extending from top to bottom */
+.continuous-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #4CAF50;
+    z-index: 0; /* Ensure the line is below all other elements */
+}
