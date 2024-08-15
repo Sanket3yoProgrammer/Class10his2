@@ -1,6 +1,6 @@
  body {
     font-family: 'Patrick Hand', cursive;
-    background-color: #cfffd0;
+    background-color: #f4f4f4;/*#cfffd0;*/
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -94,7 +94,7 @@ h2 {
 
 /* The continuous line extending from top to bottom */
 .continuous-line {
-    position: fixed;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
