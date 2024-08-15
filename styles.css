@@ -94,11 +94,11 @@ h2 {
 
 /* The continuous line extending from top to bottom */
 .continuous-line {
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
-    height: 100vh;
+    height: 100%;
     background-color: #4CAF50;
     z-index: 0; /* Ensure the line is below all other elements */
 }
