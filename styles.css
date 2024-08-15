@@ -98,7 +98,7 @@ h2 {
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
-    height: 9000px;
+    height: 900000px;
     background-color: #4CAF50;
     z-index: 0; /* Ensure the line is below all other elements */
 }
