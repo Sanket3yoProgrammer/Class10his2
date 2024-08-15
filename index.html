@@ -336,7 +336,16 @@
     z-index: 2; /* Ensure the year box is above the line */
     position: relative;
 }
-
+.year-line {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 60px; /* adjust the height to connect the boxes */
+    background-color: #4CAF50;
+    z-index: 1; /* place the line below the year box and text box */
+}
 .year-line::before {
     content: '';
     position: absolute;
