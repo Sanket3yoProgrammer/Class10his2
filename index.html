@@ -336,16 +336,22 @@
     z-index: 2; /* Ensure the year box is above the line */
     position: relative;
 }
-.year-line {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 60px; /* adjust the height to connect the boxes */
-    background-color: #4CAF50;
-    z-index: 1; /* place the line below the year box and text box */
+.note.section-5 .year-line {
+    height: 120px; /* adjust the height to connect box 5 and 6 */
 }
+
+.note.section-6 .year-line {
+    height: 120px; /* adjust the height to connect box 6 and 7 */
+}
+
+.note.section-7 .year-line {
+    height: 120px; /* adjust the height to connect box 7 and 8 */
+}
+
+.note.section-8 .year-line {
+    height: 120px; /* adjust the height to connect box 8 and 9 */
+}
+        
 .year-line::before {
     content: '';
     position: absolute;
