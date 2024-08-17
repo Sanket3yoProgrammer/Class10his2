@@ -7,6 +7,16 @@
     position: relative;
     transition: background-color 1.5s ease, color 1.5s ease;
 }
+.hamburger-menu .dot {
+    width: 20px;
+    height: 20px;
+    background-color: black; 
+    border: 3px solid darkgrey;
+    border-radius: 100px;
+    margin: -7px;
+    z-index: 1001;
+    top: 10px;
+}
 
 .light-mode {
     background-color: #f4f4f4;
