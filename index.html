@@ -21,23 +21,15 @@
 </head>
 
 <body>
-<div class="hamburger-menu">
-    <div class="hamburger-icon" onclick="toggleMenu()">☰</div>
-    <div class="menu-content" id="menuContent">
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-track">
-                    <div class="toggle-thumb" id="toggleThumb"></div>
-                </div>
-                <div class="toggle-labels">
-                    <span class="mode" onclick="setMode('dark')">Dark</span>
-                    <span class="mode" onclick="setMode('color')">Color</span>
-                    <span class="mode" onclick="setMode('light')">Light</span>
-                </div>
-            </div>
+<!-- Hamburger Menu -->
+    <div class="hamburger-menu">
+        <span class="dot">≡</span>
+        <div class="dropdown-content">
+            <button onclick="setMode('dark')">Dark mode</button>
+            <button onclick="setMode('color')">Color mode</button>
+            <button onclick="setMode('light')">Light mode</button>
         </div>
     </div>
-</div>
     
     <div class="container">
     <div class="continuous-line"></div> <!-- Continuous line from top to bottom -->
@@ -335,7 +327,7 @@
         </div>
 </div>
     </div>
-  <!-- JavaScript to Handle Mode Switching -->
+      <!-- JavaScript to Handle Mode Switching -->
     <script>
         function setMode(mode) {
             document.body.className = ''; // Reset all classes
@@ -348,39 +340,7 @@
             }
         }
     </script>
-    <!-- Additional styling to connect the dots -->
-<script>
-    function toggleMenu() {
-    var menu = document.getElementById("menuContent");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-}
-
-function setMode(mode) {
-    var thumb = document.getElementById("toggleThumb");
-    
-    switch (mode) {
-        case 'dark':
-            thumb.style.left = '0px';
-            document.body.style.backgroundColor = '#333';
-            document.body.style.color = '#fff';
-            break;
-        case 'color':
-            thumb.style.left = '50px';
-            document.body.style.backgroundColor = '#2e7d32';
-            document.body.style.color = '#000';
-            break;
-        case 'light':
-            thumb.style.left = '100px';
-            document.body.style.backgroundColor = '#f4f4f4';
-            document.body.style.color = '#000';
-            break;
-    }
-}
-</script>
+        
     <style>
 
             
@@ -391,3 +351,5 @@ function setMode(mode) {
 </body>
 
 </html>
+
+
