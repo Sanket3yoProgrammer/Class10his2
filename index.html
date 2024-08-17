@@ -21,7 +21,11 @@
 </head>
 
 <body class="light-mode">
- 
+    
+ <div class="page-count" id="page-count">
+        <span id="current-section">1</span> / <span id="total-sections">1</span>
+    </div>
+    
     <!-- Hamburger Menu -->
 
 <div class="hamburger-menu">
@@ -413,7 +417,53 @@ document.querySelectorAll('.toggle-button').forEach(button => {
 });
   
     </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const pageCountElem = document.getElementById('page-count');
+    const currentSectionElem = document.getElementById('current-section');
+    const totalSectionsElem = document.getElementById('total-sections');
 
+    const sections = Array.from(document.querySelectorAll('.section'));
+    const totalSections = sections.length;
+
+    totalSectionsElem.textContent = totalSections;
+
+    function updateCurrentSection() {
+        let currentSection = 1;
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        for (let i = 0; i < sections.length; i++) {
+            const section = sections[i];
+            const rect = section.getBoundingClientRect();
+            const sectionTop = rect.top + window.scrollY;
+            const sectionBottom = rect.bottom + window.scrollY;
+
+            if (sectionTop <= scrollPosition && sectionBottom >= scrollPosition) {
+                currentSection = i + 1;
+            }
+        }
+
+        currentSectionElem.textContent = currentSection;
+    }
+
+    window.addEventListener('scroll', updateCurrentSection);
+    window.addEventListener('resize', updateCurrentSection);
+
+    pageCountElem.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        const onMouseMove = (e) => {
+            window.scrollBy(0, e.movementY * 5); // Adjust scroll speed factor as needed
+        };
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', () => {
+            document.removeEventListener('mousemove', onMouseMove);
+        }, { once: true });
+    });
+
+    updateCurrentSection();
+});
+</script>
 </body>
 
 </html>
