@@ -20,17 +20,52 @@
 
 </head>
 
-<body>
-<!-- Hamburger Menu -->
-    <div class="hamburger-menu">
-        <span class="dot">≡</span>
-        <div class="dropdown-content">
-            <button onclick="setMode('dark')">Dark mode</button>
-            <button onclick="setMode('color')">Color mode</button>
-            <button onclick="setMode('light')">Light mode</button>
-        </div>
+<body class="light-mode">
+ 
+    <!-- Hamburger Menu -->
+
+<div class="hamburger-menu">
+
+  <button class="menu-toggle">
+
+    <span class="menu-icon">☰️</span>
+
+  </button>
+
+  <div class="dropdown-content" style="background-color: black;">
+
+    <div class="mode-container" style="background-color: black;">
+
+      <button class="mode-button" onclick="setMode('dark')">
+
+        <span class="mode-icon">🌑</span>
+
+        <span class="mode-text">Dark</span>
+
+      </button>
+
+      <button class="mode-button" onclick="setMode('color')">
+
+        <span class="mode-icon">🎨</span>
+
+        <span class="mode-text">Color</span>
+
+      </button>
+
+      <button class="mode-button" onclick="setMode('light')">
+
+        <span class="mode-icon">☀️</span>
+
+        <span class="mode-text">Light</span>
+
+      </button>
+
     </div>
-    
+
+  </div>
+
+</div>
+  
     <div class="container">
     <div class="continuous-line"></div> <!-- Continuous line from top to bottom -->
         <!-- Section 1 -->
@@ -329,6 +364,28 @@
     </div>
       <!-- JavaScript to Handle Mode Switching -->
     <script>
+      function setMode(mode) {
+
+    document.body.className = mode + "-mode";
+
+    const toggleBar = document.querySelector('.toggle-bar');
+
+    let position = 0;
+
+    if (mode === 'color') {
+
+        position = 1;
+
+    } else if (mode === 'light') {
+
+        position = 2;
+
+    }
+
+    toggleBar.style.transform = `translateX(${position * 100}%)`;
+
+}
+      
         function setMode(mode) {
             document.body.className = ''; // Reset all classes
             if (mode === 'dark') {
@@ -341,15 +398,25 @@
         }
     </script>
         
-    <style>
+    <script>
 
             
-            
+            document.querySelector('.menu-icon').addEventListener('click', function() {
+  document.querySelector('.menu-options').classList.toggle('active');
+});
+
+document.querySelectorAll('.toggle-button').forEach(button => {
+  button.addEventListener('click', function() {
+    document.body.classList.remove('dark-mode', 'color-mode', 'light-mode');
+    document.body.classList.add(this.classList[1]);
+  });
+});
   
-    </style>
+    </script>
 
 </body>
 
 </html>
+
 
 
