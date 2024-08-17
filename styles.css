@@ -71,6 +71,21 @@
     color: black;
 }
 
+.light-mode .menu-toggle {
+
+    background-color: darkgrey;
+
+    color: black;
+
+}
+
+.dark-mode .menu-toggle {
+
+    background-color: white;
+
+    color: black;
+}
+
 .dark-mode .year-container .year-box {
     background-color: black;
 }
@@ -79,48 +94,10 @@
     background-color: #2e8b57;
 }
 
-/* Hamburger Menu Styles */
-.hamburger-menu {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-    z-index: 1000;
-}
+/* Hamburger Menu */
 
-.hamburger-menu .dot {
-    width: 8px;
-    height: 8px;
-    background-color: black;
-    border-radius: 50%;
-    margin: 4px;
-}
 
-.hamburger-menu .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    background-color: white;
-    min-width: 120px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    z-index: 1;
-}
 
-.hamburger-menu:hover .dropdown-content {
-    display: block;
-}
-
-.hamburger-menu button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background: none;
-    text-align: left;
-    cursor: pointer;
-    font-size: 14px;
-}
 
 .hamburger-menu button:hover {
     background-color: #ddd;
@@ -230,6 +207,101 @@ h2 {
     height: 100%;
     background-color: #4CAF50;
     z-index: 0; /* Ensure the line is below all other elements */
+}
+
+
+
+
+/*Hamburgeeer Styles*/
+.hamburger-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: #333;
+  transition: 0.4s;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #f9f9f9;
+  border: 1px solid black;
+  padding: 10px;
+  display: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(0);
+  transition: 0.4s;
+}
+
+.hamburger-menu:hover .dropdown-content {
+  display: block;
+  transform: scale(1);
+}
+
+.mode-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mode-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.4s;
+  margin: 5px;
+}
+
+.mode-button:hover {
+  background-color: #e0e0e0;
+}
+
+.mode-button:active {
+  transform: scale(0.9);
+}
+
+.mode-icon {
+  font-size: 18px;
+  color: #666;
+  margin-right: px;
+  padding-top: 2px;
+  padding-left: 1.5px;
+  padding-right: 1.5px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.mode-text {
+  font-size: 14px;
+  color: #333;
 }
 
 
