@@ -335,7 +335,19 @@
         </div>
 </div>
     </div>
-
+  <!-- JavaScript to Handle Mode Switching -->
+    <script>
+        function setMode(mode) {
+            document.body.className = ''; // Reset all classes
+            if (mode === 'dark') {
+                document.body.classList.add('dark-mode');
+            } else if (mode === 'color') {
+                document.body.classList.add('color-mode');
+            } else if (mode === 'light') {
+                document.body.classList.add('light-mode');
+            }
+        }
+    </script>
     <!-- Additional styling to connect the dots -->
 <script>
     function toggleMenu() {
