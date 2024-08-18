@@ -8,15 +8,12 @@
     transition: background-color 1.5s ease, color 1.5s ease;
 }
 
-/* General styles for body and scrollbar */
+/* General styles for body and scrollbar 
 body {
-    overflow-y: scroll;
+    overflow-y: scroll;*/
 }
 
-/* Custom scrollbar styling */
-::-webkit-scrollbar {
-    width: 20px;
-}
+
 
 ::-webkit-scrollbar-thumb {
     background-color: #888;
@@ -337,27 +334,27 @@ h2 {
 
 /* Custom Scrollbar */
 body {
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: #888 #f4f4f4; /* Scrollbar thumb and track color */
+    scrollbar-width: auto; /* For Firefox, auto makes it bigger */
+    scrollbar-color: #444 #e0e0e0; /* More visible colors */
     scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 20px; /* Increase width for visibility */
 }
 
 body::-webkit-scrollbar-track {
-    background: #f4f4f4; /* Track color */
+    background: #e0e0e0; /* Lighter track color for contrast */
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #888; /* Scrollbar thumb color */
-    border-radius: 10px; /* Rounded edges for the thumb */
-    border: 2px solid #f4f4f4; /* Adds space around the thumb */
+    background-color: #444; /* Darker thumb color for visibility */
+    border-radius: 12px; /* Rounded edges for the thumb */
+    border: 3px solid #e0e0e0; /* Adds space around the thumb */
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Darker thumb on hover */
+    background-color: #222; /* Even darker thumb on hover */
 }
 
 /* Faster Scrolling */
@@ -376,5 +373,3 @@ window.onload = function() {
         }
     });
 };
-
-
