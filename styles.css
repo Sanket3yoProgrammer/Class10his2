@@ -133,7 +133,10 @@ body {
 .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: -10px;
     box-sizing: border-box;
     position: relative;
     z-index: 1; /* Place the container above the line */
