@@ -8,10 +8,10 @@
     transition: background-color 1.5s ease, color 1.5s ease;
 }
 
-/* General styles for body and scrollbar
+/* General styles for body and scrollbar*/
 body {
     overflow-y: scroll;
-}*/
+}
 
 /* Page count widget styling */
 .page-count {
